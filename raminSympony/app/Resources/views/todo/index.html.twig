@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h3 class="page-header">Auteur : Ramin Jormozeh</h3><hr>
+<table class="table">
+	<thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Nom</th>
+		  <th scope="col">Description</th>
+		  <th scope="col">Prix</th>
+		  <th scope="col"></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for produit in produits %}
+			<tr>
+			  <th scope="row">{{produit.id}}</th>
+			  <td>{{produit.nom}}</td>
+			  <td>{{produit.description}}</td>
+			  <td>{{produit.prix}}$CA</td>
+			  <td>
+				  <a href="http://localhost/raminSympony/web/todo/edit/{{produit.id}}" class="btn btn-primary">Modifier</a>
+				  <a href="http://localhost/raminSympony/web/todo/delete/{{produit.id}}" class="btn btn-danger">Suprimer</a>
+				  <a href="http://localhost/raminSympony/web/todo/details/{{produit.id}}" class="btn btn-success">Detaille</a>
+			  </td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}

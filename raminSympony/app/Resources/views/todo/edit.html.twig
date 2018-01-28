@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<a href="http://localhost/raminSympony/web/" class="btn btn-primary">Retour</a><hr>
+	<h3 class="page-header">Modifier {{produit.nom}}</h3>
+		{{form_start(form)}}
+		{{form_widget(form)}}
+		{{form_end(form)}}
+	
+{% endblock %}

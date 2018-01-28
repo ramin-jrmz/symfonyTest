@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<a href="http://localhost/raminSympony/web/" class="btn btn-primary">Retour</a><hr>
+	<h3 class="page-header">Nom de produit : {{produit.nom}}</h3>
+	<ul class="list-group">
+		<li class="list-group-item">Prix : {{produit.prix}} $CA</li>
+		<li class="list-group-item">Description :<p> {{produit.description}}</p></li>
+	</ul>
+	
+{% endblock %}
